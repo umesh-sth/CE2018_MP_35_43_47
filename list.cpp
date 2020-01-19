@@ -2,16 +2,12 @@
 #include<iostream>
 #include "linkedlist.h"
 using namespace std;
-
-
 List::List(){
 	HEAD = NULL;
 	TAIL = NULL;
 	
 }
-
 List::~List(){}
-
 bool List::isEmpty(){
 	if (HEAD==NULL && TAIL == NULL){
 		return true;
@@ -47,9 +43,7 @@ void List::addToHead(int data){
 	if(TAIL==NULL){
 		TAIL= HEAD;
 	}
-	
-}  
-
+} 
 void List::addToTail(int data){
 	Node* newnode = new Node();
 	newnode->info = data;
@@ -65,8 +59,6 @@ void List::addToTail(int data){
     }
 	
 }
-
-
 int List::removeFromHead(){
 	Node* nodeToDelete;
 	nodeToDelete =HEAD;
@@ -75,8 +67,6 @@ int List::removeFromHead(){
 	TAIL->next = HEAD;
 	return num;
 }
-
-
 void List::traverse(){
 	Node* temp = HEAD;
 	
@@ -97,28 +87,15 @@ int List::showHead(){
 int List::showTail(){
 	return TAIL -> info;
 }
-
-
-
-
-
-
-
-
-int main(){
-
-	
-	
-
-	
+//main function
+int main(){	
 //IMPLEMENTING QUEUE
-
 	cout<<"\nQueue Implementation:"<<endl;
 	Queue qu;
 	qu.isEmpty();
 	qu.enqueuetohead(4);
 	qu.dequeue();
-	for(int i=1;i<15;i=i+2){
+	for(int i=1;i<15;i++){
 		if(qu.isFull() == false)
 			qu.enqueue(i);
 		else{
@@ -141,9 +118,7 @@ int main(){
 	cout<<qu.rear()<<"  ";
 	cout<< qu.front();
 	
-	return 0;
-	
-	
+	return 0;	
 }
 
 

@@ -26,8 +26,6 @@ class List{
 		int showHead();
 		int showTail();
 };
-
-
 class Queue{
 	private:
 		List l;
